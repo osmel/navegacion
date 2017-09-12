@@ -7,12 +7,30 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>modal</ion-title>
+    <ion-title>Mi Pagina Modal</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <h1> Esta es mi modal</h1>
+    <p> {{persona.nombre}} </p>
+    <p> {{persona.edad}}   </p>
+
+
+	 
+	   <button ion-button
+	   		color="light"
+	  		block (click)="cerrar_con_parametros()">
+	    Cerrar con parametros
+	  </button>
+
+
+	   <button ion-button
+	   		color="verde"
+	  		block (click)="cerrar_sin_parametros()">
+	    Cerrar SIN parametros
+	  </button>
 
 </ion-content>

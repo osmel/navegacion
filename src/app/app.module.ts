@@ -39,7 +39,19 @@ import { Pagina2Page,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+   // IonicModule.forRoot(MyApp)
+  
+    
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Atraz',
+      iconMode: 'ios',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      tabsPlacement: 'bottom',
+      pageTransition: 'ios-transition'
+    } )
+
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

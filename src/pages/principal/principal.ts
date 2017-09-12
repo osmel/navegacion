@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams, MenuController} from 'ionic-angular';
 import { Pagina2Page }  from '../index.paginas';
 
 /**
@@ -15,12 +15,21 @@ import { Pagina2Page }  from '../index.paginas';
   templateUrl: 'principal.html',
 })
 export class PrincipalPage {
+	pagina2:any=Pagina2Page;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  	public miMenu:MenuController
+  	) {
   }
 
   navegarPagina(){
   		this.navCtrl.push(Pagina2Page);
+  }
+
+  mostrarMenu() {
+  	this.miMenu.toggle(); //no open() porq puede ser que este abierto
+  						  //ni close()	porq puede ser que este cerrado
+
   }
 
 }
